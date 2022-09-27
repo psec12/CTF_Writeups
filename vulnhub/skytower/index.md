@@ -8,7 +8,7 @@
 
 **3- Post Exploitation**
 
-**Enumeration**
+<h3 style="color:#ef260a;">Enumeration</h3>
 
 We begin with nmap scan to see open ports and services running.
 
@@ -61,7 +61,7 @@ Let's try basic sql injection payload sql error occured which means there is sql
 ![sqlinjection](https://user-images.githubusercontent.com/113348039/192633290-4261b337-80f0-4666-b209-a1a9db0bac97.png)
 ![SqlError](https://user-images.githubusercontent.com/113348039/192633384-6518d90d-014b-43b4-8333-3f3b41ce5e3b.png)
 
-**Exploiting Sql Injection**
+<h3 style="color:#ef260a;">Exploiting Sql Injection</h3>
 
 I tried some payloads til i write the right payload that exploit the vulnerability
 
@@ -95,8 +95,8 @@ execute the command to delete .bashrc file then connect with ssh
 AND Finally we got a shell
 ![SHELL](https://user-images.githubusercontent.com/113348039/192634080-6d856eae-64b4-4119-bb3d-873f28bb07ba.png)
 
-**Post Exploitation**
-**Privilege Escalation**
+<h3 style="color:#ef260a;">Post Exploitation</h3>
+<h3 style="color:#ef260a;">Privilege Escalation</h3>
 * Method 1
 
 Users on host: john , sara , william 
