@@ -1,4 +1,4 @@
-**skytower is boot2root machine from vulnhub and considered an easy machine.**
+**Skytower is an old boot2root machine from vulnhub and considered an easy machine.**
 
 **This is my methodolgy** 
 
