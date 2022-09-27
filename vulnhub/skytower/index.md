@@ -12,16 +12,6 @@
 
 We begin with nmap scan to see open ports and services running.
 
-`nmap -sC -sV -p- -T5 10.0.2.16
-Starting Nmap 7.92 ( https://nmap.org ) at 2022-09-27 09:01 EDT
-Nmap scan report for 10.0.2.16
-Host is up (0.00086s latency).
-Not shown: 65532 closed tcp ports (conn-refused)
-PORT     STATE    SERVICE    VERSION
-22/tcp   filtered ssh
-80/tcp   open     http       Apache httpd 2.2.22 ((Debian))
-3128/tcp open     http-proxy Squid http proxy 3.1.20`
-
 ![nmapScan](https://user-images.githubusercontent.com/113348039/192632294-b57cf905-5618-4951-8eb6-0ba6c5f30976.png)
 
 
@@ -32,6 +22,10 @@ PORT     STATE    SERVICE    VERSION
 -p-: to scan all 65535 ports
 
 -T5: to speed up 
+
+22/tcp   filtered ssh
+80/tcp   open     http       Apache httpd 2.2.22 ((Debian))
+3128/tcp open     http-proxy Squid http proxy 3.1.20
 
 * Enumerating HTTP 
 
