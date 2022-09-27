@@ -1,3 +1,3 @@
 # CTF Writeups
 
-* [vulnhub](/ctf-writeups/vulnhub)
+* **[vulnhub](/ctf-writeups/vulnhub)**
