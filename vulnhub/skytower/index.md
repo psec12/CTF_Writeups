@@ -10,8 +10,7 @@
 
 **Enumeration**
 
-We begin with nmap scan to see open ports and services running.![login](https://user-images.githubusercontent.com/113348039/192632548-a278517d-0597-4537-947d-773a932f7f91.png)
-
+We begin with nmap scan to see open ports and services running.
 
 `nmap -sC -sV -p- -T5 10.0.2.16
 Starting Nmap 7.92 ( https://nmap.org ) at 2022-09-27 09:01 EDT
@@ -31,6 +30,8 @@ PORT     STATE    SERVICE    VERSION
 -sV: for version 
 
 -p-: to scan all 65535 ports
+
+-T5: to speed up 
 
 * Enumerating HTTP 
 
@@ -55,8 +56,8 @@ But it wasn't verbose , I tried some credentials but all failed.
 ![authentication2](https://user-images.githubusercontent.com/113348039/192633201-8c352223-ff99-4def-9221-5049abc4968d.png)
 
 
-
 Let's try basic sql injection payload sql error occured which means there is sql injection vulnerability
+
 ![sqlinjection](https://user-images.githubusercontent.com/113348039/192633290-4261b337-80f0-4666-b209-a1a9db0bac97.png)
 ![SqlError](https://user-images.githubusercontent.com/113348039/192633384-6518d90d-014b-43b4-8333-3f3b41ce5e3b.png)
 
@@ -65,6 +66,7 @@ Let's try basic sql injection payload sql error occured which means there is sql
 I tried some payloads til i write the right payload that exploit the vulnerability
 
    ' || 1=1#
+
 ![sqlPayload](https://user-images.githubusercontent.com/113348039/192633504-94c61129-bb41-4665-9d59-2ce84e45e926.png)
 ![PayloadResult](https://user-images.githubusercontent.com/113348039/192633571-3b84886d-174d-4af3-96e5-e8a5d151e1c0.png)
 
@@ -93,17 +95,16 @@ execute the command to delete .bashrc file then connect with ssh
 AND Finally we got a shell
 ![SHELL](https://user-images.githubusercontent.com/113348039/192634080-6d856eae-64b4-4119-bb3d-873f28bb07ba.png)
 
-
-
 **Post Exploitation**
 **Privilege Escalation**
 * Method 1
 
 Users on host: john , sara , william 
+
 ![Users](https://user-images.githubusercontent.com/113348039/192634528-073b0438-927c-4a8d-8e70-b068d42608be.png)
 
-
 Go back to login page which is vulnerable to sql injection and try to get the password for these accounts
+
 ![SaraCreds](https://user-images.githubusercontent.com/113348039/192634637-161e0129-b3c9-4fee-b952-eed45e4f7210.png)
 ![SaraCreds2](https://user-images.githubusercontent.com/113348039/192634656-faca388e-4c4b-4a15-8ea1-d0d7f2e405ca.png)
 ![williamCreds](https://user-images.githubusercontent.com/113348039/192634673-72e84de7-73e4-4626-94c3-7e3d1f901117.png)
@@ -116,8 +117,7 @@ user:william , password:senseable
 
 If you type netstat -ano to find the connections on the machine 
 
-![netstat](https://user-images.githubusercontent.com/113348039/192634747-bb5ae53a-04f5-45ab-84a8-94eb03aedd78.png)
-
+![netstat](https://user-images.githubusercontent.com/113348039/192638758-fbb7031c-e643-450c-a1ed-26f605c77ecb.png)
 
 the result indicate that port 3306 is open which is mysql, let's try to inspect login.php to find the credentials
 
