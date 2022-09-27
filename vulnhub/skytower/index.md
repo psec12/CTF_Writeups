@@ -2,13 +2,13 @@
 
 ** This is my methodolgy 
 
-** 1- Enumeration 
-** 2- Exploitation
-** 3- Post Exploitation
+* ** 1- Enumeration **
+* ** 2- Exploitation **
+* ** 3- Post Exploitation **
 
 ** Enumeration
 We begin with nmap scan to see open ports and services running.
-'''nmap -sC -sV -p- -T5 10.0.2.16
+`nmap -sC -sV -p- -T5 10.0.2.16
 Starting Nmap 7.92 ( https://nmap.org ) at 2022-09-27 09:01 EDT
 Nmap scan report for 10.0.2.16
 Host is up (0.00086s latency).
@@ -16,7 +16,7 @@ Not shown: 65532 closed tcp ports (conn-refused)
 PORT     STATE    SERVICE    VERSION
 22/tcp   filtered ssh
 80/tcp   open     http       Apache httpd 2.2.22 ((Debian))
-3128/tcp open     http-proxy Squid http proxy 3.1.20'''
+3128/tcp open     http-proxy Squid http proxy 3.1.20`
 
 -sC: for default scripts
 -sV: for version 
