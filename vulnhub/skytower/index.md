@@ -36,11 +36,10 @@ I tried to test if there was broken authentication
 I typed anything to see whether the error message is verbose
 But it wasn't verbose , I tried some credentials but all failed.
 
-Let's try basic sql injection payload
-sql error occured which means there is sql injection vulnerability
-==================================================
+Let's try basic sql injection payload sql error occured which means there is sql injection vulnerability
+
 ** Exploiting Sql Injection
-I tried some payloads till i write the right payload that exploit the vulnerability
+I tried some payloads til i write the right payload that exploit the vulnerability
 
    ' || 1=1#
    
